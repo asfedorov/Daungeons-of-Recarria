@@ -36,12 +36,58 @@ class SQLModel:
         """
         pass
 
+    @classmethod
+    def _get_by_pk(cls, pk):
+        conn = cls._connect()
+        cur = conn.cursor()
+
+        cur.execute(
+            """
+                SELECT *
+                FROM :table
+                WHERE id = :pk
+            """,
+            {'table': cls._TABLE, 'pk': pk}
+        )
+
+        result = {}
+        record = cur.fetchone()
+        for idx, col in enumerate(cur.description):
+            result[col] = record[idx]
+        conn.close()
+        return result
+
+    @classmethod
+    def _get_by_pk_mock(cls, *args):
+        return {
+            'zaza': 123,
+            # 'age': 123,
+            'name': 'Iozef'
+        }
+
+    @classmethod
+    def get_by_pk(cls, pk):
+        # record = cls._get_by_pk(pk)
+        record = cls._get_by_pk_mock(pk)
+        obj = cls()
+        obj.fill_data(record)
+        return obj
+
 
 class BasicModel(SQLModel):
     # Поля модели
     _FIELDS_MAPPING = {}
     _INNER_DATA = {}
     _DATABASE = 'mydb.db'
+
+    def __getattr__(self, attr):
+        if attr in self._FIELDS_MAPPING.keys():
+            return None
+        raise AttributeError()
+
+    # def __setattr__(self, attr, value):
+    #   if attr in _FIELDS_MAPPING.keys():
+    #       self.__dict__[attr] = value
 
     def fill_data(self, data):
         """
@@ -50,7 +96,7 @@ class BasicModel(SQLModel):
         """
         for key, val in data.items():
             if self._validate(key, val):
-                self._INNER_DATA[key] = val
+                self.__dict__[key] = val
 
     def _validate(self, key, val):
         key_type = self._FIELDS_MAPPING.get(key)
@@ -61,7 +107,10 @@ class BasicModel(SQLModel):
         return True
 
     def to_dict(self):
-        return self._INNER_DATA
+        inner_dict ={}
+        for key in self._FIELDS_MAPPING:
+            inner_dict[key] = getattr(self, key)
+        return inner_dict
 
 
 class Human(BasicModel):
@@ -71,10 +120,7 @@ class Human(BasicModel):
     }
     _TABLE = 'human'
 
-a = Human()
-a.fill_data({
-    'zaza': 123,
-    'age': 123,
-    'name': 'Iozef'
-})
+a = Human.get_by_pk(12)
+
+print(a.__dict__)
 print(a.to_dict())
