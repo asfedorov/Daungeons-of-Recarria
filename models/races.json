@@ -1,0 +1,19 @@
+{
+    "Elf": {
+        "BONUS_POINTS": {
+            "agility": 2,
+            "constitution": -2
+        },
+        "RACE_NAME": "Elf"
+    },
+    "Dwarf": {
+        "BONUS_POINTS": {
+            "agility": -2,
+            "constitution": 2
+        },
+        "RACE_NAME": "Dwarf"
+    },
+    "Human": {
+        "RACE_NAME": "Human"
+    }
+}
