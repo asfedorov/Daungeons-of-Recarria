@@ -1,6 +1,6 @@
 import sqlite3
 
-from . import constants
+import constants
 
 
 class ValidationError(Exception):
@@ -262,6 +262,11 @@ class Humanoid(BasicModel):
         for stat in constants.STATS:
             result[stat] = getattr(self, stat) + self.BONUS_POINTS.get(stat, 0)
 
+        return result
+
+    def to_dict(self):
+        result = super().to_dict()
+        result.update(self.get_stats())
         return result
 
     def _get_stat_cost(self, stat_val):

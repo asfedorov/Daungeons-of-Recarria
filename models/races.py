@@ -1,7 +1,7 @@
 import os
 import json
 
-from .base import Humanoid
+from base import Humanoid
 
 AVAILABLE_RACES = {}
 
