@@ -6,6 +6,8 @@ import random
  
 ■
 ○
+▲
+▼
 
 ⬚
 ▣
@@ -17,6 +19,9 @@ UNDEFINED_TILE = '.'
 WALL_TILE = '■'
 OPEN_TILE = ' '
 WATER_TILE = '○'
+
+UP_TILE = '▲'
+DOWN_TILE = '▼'
 
 MAP_TILES = ''.join([
     WALL_TILE,
@@ -55,19 +60,35 @@ class Map:
         self._rooms = []
 
         self.shrink_rooms()
+        self.generate_rooms()
+        self.evolve()
 
-        for room in self._rooms:
-            my_room = self._gen_room(room)
-            for i, row in enumerate(my_room):
-                for j, col in enumerate(row):
-                    self._field[room[1][0]+i][room[0][0]+j] = col
+        self.connect_rooms()
 
+        self.set_entrances()
+
+    def set_entrances(self):
+        up_room = random.choice(self._rooms)
+        down_room = random.choice(self._rooms)
+
+        up_coord = self._get_random_open_tile_from_room(up_room, is_near_wall=False)
+        self._field[up_coord[0]][up_coord[1]] = UP_TILE
+
+        down_coord = self._get_random_open_tile_from_room(down_room, is_near_wall=False)
+        self._field[down_coord[0]][down_coord[1]] = DOWN_TILE
+
+    def evolve(self):
         for i in range(self._max_evolve):
             self._evolve(WALL_TILE, OPEN_TILE)
             self.connect_rooms()
             self._evolve(OPEN_TILE, WALL_TILE)
 
-        self.connect_rooms()
+    def generate_rooms(self):
+        for room in self._rooms:
+            my_room = self._gen_room(room)
+            for i, row in enumerate(my_room):
+                for j, col in enumerate(row):
+                    self._field[room[1][0]+i][room[0][0]+j] = col
 
     def shrink_rooms(self):
         room = [
@@ -85,9 +106,9 @@ class Map:
             shrink_room_width = shrink_room[0][1] - shrink_room[0][0]
             shrink_room_height = shrink_room[1][1] - shrink_room[1][0]
             new_room = [[0, 0], [0, 0]]
-            side = random.choice((True, False))
-            # if shrink_room_width >= shrink_room_height:
-            if side:
+            # side = random.choice((True, False))
+            if shrink_room_width >= shrink_room_height:
+            # if side:
                 old_w = shrink_room[0][1]
                 new_w = old_w - ((shrink_room[0][1] - shrink_room[0][0]) // random.randrange(2, 4))
 
@@ -153,12 +174,23 @@ class Map:
 
         return end in temp_connected
 
-    def _get_random_open_tile_from_room(self, room):
+    def _get_random_open_tile_from_room(self, room, is_near_wall=None):
         open_tiles = []
         for w in range(room[0][0], room[0][1]):
                 for h in range(room[1][0], room[1][1]):
                     if self._field[h][w] != WALL_TILE:
-                        open_tiles.append((h, w))
+                        if is_near_wall is None:
+                            open_tiles.append((h, w))
+                        else:
+                            wall_is_neighbour = False
+                            for n in self._get_neighbours_coord(h, w):
+                                if self._field[n[0]][n[1]] == WALL_TILE:
+                                    wall_is_neighbour = True
+                                    break
+                            if (is_near_wall and wall_is_neighbour) or (not is_near_wall and not wall_is_neighbour):
+                                open_tiles.append((h, w))
+
+
         return random.choice(open_tiles)
 
     def _connect_rooms(self, room1, room2):
@@ -261,4 +293,4 @@ def generate_map(width, height, rooms=5):
     my_map = Map(width, height, rooms)
     print(my_map)
 
-generate_map(48, 24)
+generate_map(32, 24)
