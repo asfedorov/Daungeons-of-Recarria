@@ -3,18 +3,20 @@ import pprint
 import random
 
 """
+ 
+■
+○
 
 ⬚
 ▣
 ▩
-
+▨
 """
 
 UNDEFINED_TILE = '.'
-WALL_TILE = '▩'
-OPEN_TILE = '⬚'
-WATER_TILE = '⬚'
-# CAVE_TILE = '◻'
+WALL_TILE = '■'
+OPEN_TILE = ' '
+WATER_TILE = '○'
 
 MAP_TILES = ''.join([
     WALL_TILE,
@@ -37,7 +39,7 @@ def _generate_choice(tiles, weights=None):
 
 
 class Map:
-    _min_room_size = (7, 7)
+    _min_room_size = (5, 5)
     _max_attemps = 5
     _wall_additional_size = 2
     _max_evolve = 1
@@ -49,9 +51,25 @@ class Map:
         self._height = height
         self._field = self._gen_blank(self._width, self._height)
         self._open_tiles = []
-
+        self._rooms_count = rooms
         self._rooms = []
 
+        self.shrink_rooms()
+
+        for room in self._rooms:
+            my_room = self._gen_room(room)
+            for i, row in enumerate(my_room):
+                for j, col in enumerate(row):
+                    self._field[room[1][0]+i][room[0][0]+j] = col
+
+        for i in range(self._max_evolve):
+            self._evolve(WALL_TILE, OPEN_TILE)
+            self.connect_rooms()
+            self._evolve(OPEN_TILE, WALL_TILE)
+
+        self.connect_rooms()
+
+    def shrink_rooms(self):
         room = [
             [0, self._width],
             [0, self._height]
@@ -59,7 +77,7 @@ class Map:
         self._rooms.append(room)
 
         attemps = 0
-        while len(self._rooms) < rooms:
+        while len(self._rooms) < self._rooms_count:
             if attemps > self._max_attemps:
                 raise NotEnoughMapSize()
 
@@ -67,7 +85,9 @@ class Map:
             shrink_room_width = shrink_room[0][1] - shrink_room[0][0]
             shrink_room_height = shrink_room[1][1] - shrink_room[1][0]
             new_room = [[0, 0], [0, 0]]
-            if shrink_room_width >= shrink_room_height:
+            side = random.choice((True, False))
+            # if shrink_room_width >= shrink_room_height:
+            if side:
                 old_w = shrink_room[0][1]
                 new_w = old_w - ((shrink_room[0][1] - shrink_room[0][0]) // random.randrange(2, 4))
 
@@ -95,16 +115,7 @@ class Map:
                 new_room[0][1] = shrink_room[0][1]
             self._rooms.append(new_room)
 
-        for room in self._rooms:
-            my_room = self._gen_room(room)
-            for i, row in enumerate(my_room):
-                for j, col in enumerate(row):
-                    self._field[room[1][0]+i][room[0][0]+j] = col
-
-        for i in range(self._max_evolve):
-            self._evolve(WALL_TILE, OPEN_TILE)
-            self._evolve(OPEN_TILE, WALL_TILE)
-
+    def connect_rooms(self):
         for i in range(0, len(self._rooms)):
             if i == len(self._rooms) - 1:
                 break
@@ -142,22 +153,18 @@ class Map:
 
         return end in temp_connected
 
+    def _get_random_open_tile_from_room(self, room):
+        open_tiles = []
+        for w in range(room[0][0], room[0][1]):
+                for h in range(room[1][0], room[1][1]):
+                    if self._field[h][w] != WALL_TILE:
+                        open_tiles.append((h, w))
+        return random.choice(open_tiles)
+
     def _connect_rooms(self, room1, room2):
         if not self._check_if_rooms_connected(room1, room2):
-            start = None
-            end = None
-
-            for w in range(room1[0][0], room1[0][1]):
-                for h in range(room1[1][0], room1[1][1]):
-                    if self._field[h][w] != WALL_TILE:
-                        start = (h, w)
-                        break
-
-            for w in range(room2[0][0], room2[0][1]):
-                for h in range(room2[1][0], room2[1][1]):
-                    if self._field[h][w] != WALL_TILE:
-                        end = (h, w)
-                        break
+            start = self._get_random_open_tile_from_room(room1)
+            end = self._get_random_open_tile_from_room(room2)
 
             while start != end:
                 if start[0] < end[0]:
@@ -245,7 +252,7 @@ class Map:
 
     def __repr__(self):
         return "\n".join([
-            "".join(x)
+            " ".join(x)
             for x in self._field
         ])
 
@@ -253,6 +260,5 @@ class Map:
 def generate_map(width, height, rooms=5):
     my_map = Map(width, height, rooms)
     print(my_map)
-    # pprint.pprint(my_map._rooms)
 
-generate_map(32, 32)
+generate_map(48, 24)
