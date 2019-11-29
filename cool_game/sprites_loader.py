@@ -13,19 +13,18 @@ def load_tiles_grid():
 def get_floor_tiles():
     tiles = load_tiles_grid().get_texture_sequence()
     return tiles[
+        (_row_len)*(16//16)+80//16:(_row_len)*(16//16)+80//16+32//16
+    ] + tiles[
+        (_row_len)*(32//16)+80//16:(_row_len)*(32//16)+80//16+48//16
+    ] + tiles[
+        (_row_len)*(48//16)+80//16:(_row_len)*(48//16)+80//16+48//16
+    ] + tiles[
         (_row_len)*(272//16):(_row_len)*(272//16)+16//16
-    ] + tiles[
+    ] * 10 + tiles[
         (_row_len)*(288//16):(_row_len)*(288//16)+32//16
-    ] + tiles[
+    ] * 10 + tiles[
         (_row_len)*(304//16):(_row_len)*(304//16)+16//16
-    ]
-    #  + tiles[
-    #     (_row_len)*(16//16):(_row_len)*(16//16)+2//16
-    # ] + tiles[
-    #     (_row_len)*(32//16):(_row_len)*(32//16)+3//16
-    # ] + tiles[
-    #     (_row_len)*(48//16):(_row_len)*(48//16)+3//16
-    # ]
+    ] * 20
 
 
 def get_cracked_tiles():
