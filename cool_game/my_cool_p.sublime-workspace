@@ -1,0 +1,1469 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"fie",
+				"field_string"
+			],
+			[
+				"html",
+				"html_parser"
+			],
+			[
+				"selecte",
+				"selectedUnit"
+			],
+			[
+				"expe",
+				"experience"
+			],
+			[
+				"upgr",
+				"Upgrade"
+			],
+			[
+				"GetN",
+				"GetNeighbours"
+			],
+			[
+				"probabili",
+				"LowerVillageProbability"
+			],
+			[
+				"hex",
+				"hex_obj"
+			],
+			[
+				"foreach",
+				"foreach\tForEach"
+			],
+			[
+				"nee",
+				"need_to_update"
+			],
+			[
+				"Vec",
+				"Vector3\tVector4.*()"
+			],
+			[
+				"midd",
+				"middle_v"
+			],
+			[
+				"Gameob",
+				"gameObject"
+			],
+			[
+				"road",
+				"road_height_kf"
+			],
+			[
+				"nei",
+				"neighbour_left"
+			],
+			[
+				"left_in",
+				"left_inner_t"
+			],
+			[
+				"right_inn",
+				"right_inner_t"
+			],
+			[
+				"Last",
+				"LastIndexOf\tArrayUtility.*(array, value)"
+			],
+			[
+				"GetInn",
+				"GetInnerVertices"
+			],
+			[
+				"solid",
+				"solidFactor"
+			],
+			[
+				"selected",
+				"selected_hex"
+			],
+			[
+				"plain",
+				"plain_amb"
+			],
+			[
+				"forest",
+				"forest_amb"
+			],
+			[
+				"Audio",
+				"AudioClip\t[class]"
+			],
+			[
+				"SetA",
+				"SetActive\tGameObject.*(value)"
+			],
+			[
+				"gold",
+				"gold_text"
+			],
+			[
+				"Game",
+				"GameObject\t[class]"
+			],
+			[
+				"stopped",
+				"stopped_hex"
+			],
+			[
+				"old",
+				"oldPath"
+			],
+			[
+				"De",
+				"Debug\tFilterLevel.*"
+			],
+			[
+				"gray_s",
+				"gray_snow"
+			],
+			[
+				"sno",
+				"snow"
+			],
+			[
+				"GetComponentIn",
+				"GetComponentInChildren\tComponent.*(t)"
+			],
+			[
+				"FindT",
+				"FindWithTag\tGameObject.*(tag)"
+			],
+			[
+				"forea",
+				"foreach\tForEach"
+			],
+			[
+				"voi",
+				"void\tPersistentListenerMode.*"
+			],
+			[
+				"Ve",
+				"Vector3\t*(x, y)"
+			],
+			[
+				"Awa",
+				"Awake\tMonoBehaviour.*()"
+			],
+			[
+				"UnS",
+				"UnShadowMyMap"
+			],
+			[
+				"pri",
+				"print_output"
+			],
+			[
+				"tex",
+				"text-align"
+			],
+			[
+				"in",
+				"inline"
+			],
+			[
+				"seledi",
+				"selectedDingo"
+			],
+			[
+				"Arra",
+				"Array\t[class]"
+			],
+			[
+				"Anima",
+				"Animation\t[class]"
+			],
+			[
+				"GetMouseBu",
+				"GetMouseButtonDown\tBaseInput.*(button)"
+			],
+			[
+				"hit",
+				"hitObject"
+			],
+			[
+				"coll",
+				"collider\tContactPoint2D.*"
+			],
+			[
+				"Screepo",
+				"ScreenPointToRay\tCamera.*(position)"
+			],
+			[
+				"SetPa",
+				"SetParent\tTransform.*(parent)"
+			],
+			[
+				"box-s",
+				"box-shadow"
+			],
+			[
+				"margin",
+				"margin-bottom"
+			],
+			[
+				"data",
+				"data-dropdown-hover-all"
+			],
+			[
+				"fons",
+				"font-size"
+			],
+			[
+				"Com",
+				"Complaint\t(class)"
+			],
+			[
+				"phone",
+				"phone_number"
+			],
+			[
+				"co",
+				"color"
+			],
+			[
+				"te",
+				"text-decoration"
+			],
+			[
+				"border",
+				"border-bottom"
+			],
+			[
+				"login",
+				"login_button"
+			],
+			[
+				"padd",
+				"padding"
+			],
+			[
+				"sear",
+				"search-link"
+			],
+			[
+				"fon",
+				"font-family"
+			],
+			[
+				"re",
+				"repeat-x"
+			],
+			[
+				"f",
+				"font-size"
+			],
+			[
+				"font",
+				"font-family"
+			],
+			[
+				"pad",
+				"padding-top"
+			],
+			[
+				"bac",
+				"background-color"
+			],
+			[
+				"user",
+				"user_login"
+			],
+			[
+				"text",
+				"text-align"
+			],
+			[
+				"back",
+				"background-repeat"
+			],
+			[
+				"margin-",
+				"margin-bottom"
+			],
+			[
+				"offset",
+				"offset_y"
+			],
+			[
+				"baco",
+				"background-color"
+			],
+			[
+				"date",
+				"date_joined"
+			],
+			[
+				"order",
+				"order_by"
+			],
+			[
+				"get",
+				"get_lots_test"
+			],
+			[
+				"di",
+				"display"
+			],
+			[
+				"left",
+				"left_arrow"
+			],
+			[
+				"li",
+				"link\tTag"
+			],
+			[
+				"count",
+				"count_select"
+			],
+			[
+				"Order",
+				"OrderAttachment"
+			],
+			[
+				"str_re",
+				"str_replace"
+			],
+			[
+				"uns",
+				"unset"
+			],
+			[
+				"padding",
+				"padding-bottom"
+			],
+			[
+				"add",
+				"addslashes"
+			],
+			[
+				"new",
+				"new_masters"
+			],
+			[
+				"for",
+				"foreach\tforeach …"
+			],
+			[
+				"inline",
+				"inline-block"
+			],
+			[
+				"lot_ref",
+				"lot_ref__id"
+			],
+			[
+				"fb",
+				"fb_mailto\t(statement)"
+			],
+			[
+				"stakes",
+				"stakes_amount"
+			],
+			[
+				"stake",
+				"stake_amount"
+			],
+			[
+				"save",
+				"save_lot"
+			],
+			[
+				"e",
+				"elif\tElse if"
+			],
+			[
+				"I",
+				"IntegerField\t(class)"
+			],
+			[
+				"aut",
+				"auto_now\t(param)"
+			],
+			[
+				"sea",
+				"search_list\t(statement)"
+			],
+			[
+				"req",
+				"request_obj\t(forstmt)"
+			],
+			[
+				"last",
+				"last_modified"
+			],
+			[
+				"is",
+				"is_worker\t(statement)"
+			],
+			[
+				"auto",
+				"auto_now_add\t(param)"
+			],
+			[
+				"Da",
+				"DateTimeField\t(class)"
+			],
+			[
+				"User",
+				"UserProfile"
+			],
+			[
+				"sup",
+				"supl_views\t(module)"
+			],
+			[
+				"user_profile",
+				"user_profile_ref"
+			],
+			[
+				"Req",
+				"Request\t(class)"
+			],
+			[
+				"lo",
+				"log_user\t(function)"
+			],
+			[
+				"Use",
+				"UserLog\t(class)"
+			],
+			[
+				"ap",
+				"api_views\t(module)"
+			],
+			[
+				"pro",
+				"proxy_list\t(globalstmt)"
+			],
+			[
+				"USER",
+				"USE_PROXY\t(statement)"
+			],
+			[
+				"url",
+				"url_body\t(statement)"
+			],
+			[
+				"messa",
+				"message\t(function)"
+			],
+			[
+				"device",
+				"device_ios\t(statement)"
+			],
+			[
+				"time",
+				"timedelta\t(class)"
+			],
+			[
+				"appl",
+				"appliance\t(forstmt)"
+			],
+			[
+				"apply",
+				"apply_list_db\t(statement)"
+			],
+			[
+				"Re",
+				"RequestApply\t(class)"
+			],
+			[
+				"dele",
+				"deleted"
+			],
+			[
+				"hash",
+				"hashlib\t(module)"
+			],
+			[
+				"ha",
+				"hash\t(function)"
+			],
+			[
+				"mnt_s",
+				"mnt_subscriber_id\t(statement)"
+			],
+			[
+				"csrf",
+				"csrf_exempt"
+			],
+			[
+				"geo",
+				"geo_code"
+			],
+			[
+				"ope",
+				"operator\t(module)"
+			],
+			[
+				"devi",
+				"device\t(statement)"
+			],
+			[
+				"rat",
+				"rating_count"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "game.py",
+			"settings":
+			{
+				"buffer_size": 1170,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Packages/Python/Python.sublime-build",
+					""
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					"Syntax Check"
+				]
+			],
+			[
+				"Packages/Python/Python.sublime-build",
+				""
+			]
+		],
+		[
+			[
+				[
+					"Packages/Python/Python.sublime-build",
+					""
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					"Syntax Check"
+				],
+				[
+					"Packages/User/Vala.sublime-build",
+					""
+				]
+			],
+			[
+				"Packages/Python/Python.sublime-build",
+				""
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 316.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"upl",
+				"SFTP: Upload File"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"git h",
+				"Git: Graph Current File"
+			],
+			[
+				"pre",
+				"Pretty JSON: Format (Pretty Print) JSON"
+			],
+			[
+				"pretty",
+				"Pretty JSON: Format (Pretty Print) JSON"
+			],
+			[
+				"remo",
+				"Package Control: Remove Package"
+			],
+			[
+				"uplo",
+				"SFTP: Upload File"
+			],
+			[
+				"",
+				"File: Close All"
+			],
+			[
+				"upload",
+				"SFTP: Upload File"
+			],
+			[
+				"in",
+				"Package Control: Install Package"
+			],
+			[
+				"upol",
+				"SFTP: Upload File"
+			],
+			[
+				"uplaod",
+				"SFTP: Upload File"
+			],
+			[
+				"sync local -",
+				"SFTP: Sync Local -> Remote…"
+			],
+			[
+				"sync loca",
+				"SFTP: Sync Local -> Remote…"
+			],
+			[
+				"json",
+				"JSON Reindent: reindent file or selection"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"jso",
+				"Pretty JSON: JSON 2 XML"
+			],
+			[
+				"up",
+				"Package Control: Upgrade Package"
+			],
+			[
+				"pul",
+				"Git: Pull Current Branch"
+			],
+			[
+				"cus",
+				"Git: Custom Command"
+			],
+			[
+				"sfup",
+				"SFTP: Upload File"
+			],
+			[
+				"instaa",
+				"Package Control: Install Package"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"rem",
+				"Package Control: Remove Package"
+			],
+			[
+				"packa",
+				"Package Control: Upgrade Package"
+			],
+			[
+				"Package Control: inst",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: rem",
+				"Package Control: Remove Package"
+			],
+			[
+				"pu",
+				"Git: Push Current Branch"
+			],
+			[
+				"a",
+				"Git: Add Current File"
+			],
+			[
+				"com",
+				"Git: Commit"
+			],
+			[
+				"ad",
+				"Git: Add Current File"
+			],
+			[
+				"cu",
+				"Git: Custom Command"
+			],
+			[
+				"push",
+				"Git: Push"
+			],
+			[
+				"p",
+				"Git: Push"
+			],
+			[
+				"ch",
+				"Git: Change Branch"
+			],
+			[
+				"ne",
+				"Git: New Branch"
+			],
+			[
+				"n",
+				"Git: New Branch"
+			],
+			[
+				"pac",
+				"Package Control: List Packages"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Upgrade/Overwrite All Packages"
+			],
+			[
+				"cha",
+				"Git: Change Branch"
+			],
+			[
+				"for",
+				"Format: Javascript"
+			],
+			[
+				"new",
+				"Git: New Branch"
+			],
+			[
+				"gi pu",
+				"Git: Push All Branches"
+			],
+			[
+				"co",
+				"Git: Commit"
+			],
+			[
+				"pus",
+				"Git: Push All Branches"
+			],
+			[
+				"upgr",
+				"Package Control: Upgrade/Overwrite All Packages"
+			],
+			[
+				"pa",
+				"Package Control: Remove Package"
+			],
+			[
+				"cust",
+				"Git: Custom Command"
+			],
+			[
+				"gic",
+				"Git: Custom Command"
+			],
+			[
+				"com\\",
+				"Git: Diff: between last local commit and remote (..origin/master)"
+			],
+			[
+				"css",
+				"Set Syntax: CSS"
+			],
+			[
+				"sni jq",
+				"Snippet: jQuery ready function"
+			],
+			[
+				"merge",
+				"Git: Merge Branch"
+			],
+			[
+				"git n",
+				"Git: New Branch"
+			],
+			[
+				"pul\\",
+				"Package Control: Upgrade/Overwrite All Packages"
+			],
+			[
+				"pep",
+				"User: Python PEP8 Autoformat"
+			],
+			[
+				"c",
+				"Git: Change Branch"
+			],
+			[
+				"g",
+				"Git: Pull"
+			],
+			[
+				"git cu",
+				"Git: Custom Command"
+			],
+			[
+				"COM",
+				"Git: Commit"
+			],
+			[
+				"AD",
+				"Git: Add Current File"
+			],
+			[
+				"git push",
+				"Git: Push"
+			],
+			[
+				"git pull",
+				"Git: Pull"
+			],
+			[
+				"br",
+				"SFTP: Browse Server…"
+			],
+			[
+				"fo",
+				"Format: Javascript"
+			],
+			[
+				"gu",
+				"Git: Pull"
+			],
+			[
+				"bro",
+				"SFTP: Browse Server…"
+			],
+			[
+				"re",
+				"File: Refresh"
+			],
+			[
+				"b",
+				"SFTP: Browse Server…"
+			],
+			[
+				"add",
+				"Git: Add Current File"
+			],
+			[
+				"pull",
+				"Git: Pull Current Branch"
+			],
+			[
+				"sta",
+				"Git: Diff Staged"
+			],
+			[
+				"git ad",
+				"Git: Add Current File"
+			],
+			[
+				"brow",
+				"SFTP: Browse Server…"
+			],
+			[
+				"commi",
+				"Git: Commit"
+			],
+			[
+				"git",
+				"Git: Stash Drop"
+			],
+			[
+				"branc",
+				"Git: Change Branch"
+			],
+			[
+				"d",
+				"SFTP: Download File"
+			],
+			[
+				"git pus",
+				"Git: Push"
+			],
+			[
+				"do",
+				"SFTP: Download File"
+			],
+			[
+				"che",
+				"Git: Change Branch"
+			],
+			[
+				"m",
+				"Git: Merge Branch"
+			],
+			[
+				"git cha",
+				"Git: Change Branch"
+			],
+			[
+				"git br",
+				"Git: New Branch"
+			],
+			[
+				"git com",
+				"Git: Commit"
+			],
+			[
+				"comm",
+				"Git: Commit"
+			],
+			[
+				"comi",
+				"Git: Commit"
+			],
+			[
+				"commit",
+				"Git: Commit"
+			],
+			[
+				"add c",
+				"Git: Add Current File"
+			],
+			[
+				"git add",
+				"Git: Add Current File"
+			],
+			[
+				"git ne",
+				"Git: New Branch"
+			],
+			[
+				"git sta",
+				"Git: Stash Apply"
+			],
+			[
+				"git cus",
+				"Git: Custom Command"
+			],
+			[
+				"git commit",
+				"Git: Commit"
+			],
+			[
+				"git ",
+				"Git: New Branch"
+			],
+			[
+				"git ch",
+				"Git: Change Branch"
+			],
+			[
+				"git c",
+				"Git: Change Branch"
+			],
+			[
+				"git l",
+				"Git: Log All"
+			],
+			[
+				"git hi",
+				"Git: Graph Current File"
+			],
+			[
+				"git co",
+				"Git: Commit"
+			],
+			[
+				"sftp",
+				"SFTP: Sync Local -> Remote…"
+			],
+			[
+				"git commi",
+				"Git: Commit"
+			],
+			[
+				"git comm",
+				"Git: Commit"
+			],
+			[
+				"sft",
+				"SFTP: Setup Server…"
+			],
+			[
+				"map",
+				"SFTP: Add Alternate Remote Mapping…"
+			],
+			[
+				"gi",
+				"Git: Commit"
+			],
+			[
+				"git ta",
+				"Git: New Tag"
+			],
+			[
+				"sftp ",
+				"SFTP: Browse Server…"
+			]
+		],
+		"width": 674.0
+	},
+	"console":
+	{
+		"height": 723.0,
+		"history":
+		[
+			"'Очистка RawData временно отключены.\\n Задача %r отброшена' % request",
+			"request = 'asdasd'",
+			"import requests",
+			"print('a')",
+			"pip install requests",
+			"import requests",
+			"round(1.85, 1)",
+			"round(1.45, 1)",
+			"round(0.95, 1)",
+			"round(0.85, 1)",
+			"round(0.75, 1)",
+			"round(0.65, 1)",
+			"round(0.55, 1)",
+			"round(0.45, 1)",
+			"round(0.35, 1)",
+			"round(0.25, 1)",
+			"round(0.15, 1)",
+			"a.round(1)",
+			"a.rount(1)",
+			"a = 0.15",
+			"a = 0.15.round(1)",
+			"a = '0.15'.round(1)",
+			"a.items()",
+			"a = {1:2,2:3}",
+			"size",
+			"size = min(len(region_kladrs), size)",
+			"region_kladrs = [1,2,3,4,5,6]",
+			"size = 9",
+			"a",
+			"a = min(11,23)",
+			"import datatime",
+			"a[-2:]",
+			"a[2:]",
+			"a[:2]",
+			"a[:-2]",
+			"a = \"asdwar\"",
+			"b",
+			"b = a - datetime.timedelta(minutes=5)",
+			"a",
+			"a = datetime.datetime.now()",
+			"import datetime",
+			"b = hashlib.md5(a)",
+			"b = hashlib.md(a)",
+			"a = \"asduagdfbiu3 3u wab f3i baw\"",
+			"import hashlib",
+			"a",
+			"a = ''.join(random.choice(string.ascii_uppercase + string.digits + string.ascii_lowercase) for _ in range(10))",
+			"a",
+			"a = ''.join(random.choice(string.ascii_uppercase + string.digits + string.ascii_lowercase) for _ in range(10))",
+			"import string",
+			"a = ''.join(random.choice(string.ascii_uppercase + string.digits + string.ascii_lowercase) for _ in range(10))",
+			"import random",
+			"b",
+			"b = a.split(\",\")",
+			"a = \"asdasd\"",
+			"a[1:]",
+			"a = \"abcasd\"",
+			"a[:3]",
+			"a[:30]",
+			"a[30]",
+			"a = \"asdasdasd\"",
+			"a[0:20]",
+			"a = \"asd\"",
+			"a[0:20]",
+			"a[0:10]",
+			"a = \"sdkfhdsfigh sdlh dlsuig hdsjh gadsl iudsh  e\"",
+			"d",
+			"d = e.split(\",\")",
+			"e = \"1,2,3,4,5,\"",
+			"d",
+			"c",
+			"d = c.split(\",\")",
+			"c = \"1\"",
+			"b",
+			"b = a.split(\",\")",
+			"a = \"1,2,3,4,5,6\"",
+			"a[0]",
+			"a[0:] = \"1\"",
+			"a[0] = \"1\"",
+			"a[0] = 1",
+			"a = \"abs\"",
+			"0 == \"\"",
+			"12 != \"\"",
+			"if a: c",
+			"if a: -> c",
+			"if a: c",
+			"if a: print(1)",
+			"if a: print 1;",
+			"if a: print 1",
+			"bool(c)",
+			"bool(a)",
+			"c = False",
+			"if a",
+			"a = \"asd\"",
+			"ns",
+			"ns = ns + str(random.randrange(1000, 9999))",
+			"ns",
+			"ns = datetime.datetime.strftime(ct, '%y%m%d%S')",
+			"ns = datetime.datetime.strftime(ct, '%y%m%d%S)",
+			"ct = datetime.datetime.now()",
+			"import random",
+			"import datetime",
+			"a",
+			"a = True and False",
+			"a",
+			"a = True and True",
+			"a = True and Ture",
+			"a = true and true",
+			"a[0]",
+			"a[1]",
+			"a[1:]",
+			"a = \"b123\"",
+			"int(0.76)",
+			"234/100",
+			"176/100",
+			"76/100",
+			"a[:-1]",
+			"a = []",
+			"b.__xor__(True)",
+			"b = False",
+			"a.__xor__(True)",
+			"a.__xor__(False)",
+			"a.xor(False)",
+			"a = True",
+			"n",
+			"n = random.randint(0,5)",
+			"n",
+			"n = random.randint(0,5)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/home/saur/projects/my_cool_project",
+		"/home/saur/projects/my_cool_project/cool_game"
+	],
+	"file_history":
+	[
+		"/C/Users/saur/Desktop/UpdateProxySettingsFix.orx",
+		"/C/Users/saur/Desktop/UpdateProxySettingsProd.orx",
+		"/C/Users/saur/AppData/Local/Temp/Rar$DIa0.711/UpdateProxySettingsProd.orx",
+		"/D/projects/games/war_of_chubrics/Assets/Scripts/LookAtCamera.cs",
+		"/D/projects/games/war_of_chubrics/Assets/water.shader",
+		"/D/projects/games/war_of_chubrics/Assets/Outlined-Silhouette Only.shader",
+		"/D/projects/games/war_of_chubrics/Assets/zazu.shader",
+		"/D/projects/games/war_of_chubrics/Assets/Scripts/CameraMNG.cs",
+		"/F/Games/SteamLibrary/steamapps/common/Morrowind/mge3/default-settings",
+		"/F/Games/SteamLibrary/steamapps/common/Morrowind/Data Files/Video/mes.js",
+		"/D/projects/games/war_of_chubrics/Assets/Scripts/Map.cs",
+		"/D/projects/games/HexMyWorld/Assets/Scripts/InitMap.cs",
+		"/D/projects/games/war_of_chubrics/Assets/Prefabs/Village.prefab",
+		"/D/projects/games/war_of_chubrics/Assets/Scenes/SampleScene.unity",
+		"/C/Users/saur/AppData/Roaming/ownCloud/owncloud.cfg",
+		"/D/projects/SetTriTonVacancyReload.orx",
+		"/C/Users/saur/Downloads/Telegram Desktop/request.json",
+		"/C/Users/saur/AppData/Local/Temp/Rar$DIa0.366/player.json",
+		"/C/Users/saur/AppData/Local/Temp/Rar$DIa0.011/party.json",
+		"/C/Users/saur/AppData/Local/Temp/Rar$DIa0.561/header.json",
+		"/C/Users/saur/AppData/Local/Temp/Rar$DIa0.062/fe49a88f263608c45a652ee12765685c.json",
+		"/D/projects/tensor/hr/modules/hr_data/hr_data.orx",
+		"/D/projects/tensor/hr/hrServer/hr/service/modules/search/search/vacancies.py",
+		"/D/projects/tensor/hr/modules/dictionaries/dictionaries/constants.py",
+		"/D/projects/tensor/hr/modules/search/search/vacancies.py",
+		"/D/projects/xander work/auction/auction/stakes/tasks.py",
+		"/D/projects/tensor/hr/modules/hr_data/hr_data/vacancy/models.py",
+		"/D/projects/tensor/hr/modules/negotiation/negotiation/functions.py",
+		"/D/projects/tensor/hr/modules/source/headhunter/headhunter/api_client/client.py",
+		"/D/projects/tensor/hr/modules/search/search/base.py",
+		"/D/projects/tensor/hr/modules/hr_controllers/hr_controllers/vacancy/functions.py",
+		"/D/projects/tensor/hr2/hrServer/hr/service/modules/search/search/vacancies.py",
+		"/D/projects/xander work/megamag/back/admin/model/extension/openbay/openbay.php",
+		"/D/projects/xander work/megamag/back/admin/model/catalog/product.php",
+		"/D/projects/xander work/megamag/back/catalog/view/theme/megamag/template/common/search.tpl",
+		"/D/projects/xander work/megamag/back/catalog/view/theme/megamag/template/common/footer.tpl",
+		"/D/projects/xander work/megamag/back/catalog/view/theme/megamag/template/error/not_found.tpl",
+		"/D/projects/xander work/megamag/back/catalog/view/theme/megamag/template/information/information.tpl",
+		"/D/projects/xander work/megamag/back/tunnel.php",
+		"/D/projects/xander work/megamag/back/log-post.txt",
+		"/D/projects/xander work/megamag/front/catalog2.html",
+		"/D/projects/xander work/megamag/front/catalog1.html",
+		"/D/projects/xander work/megamag/back/catalog/view/theme/default/template/common/search.tpl",
+		"/D/projects/xander work/megamag/back/catalog/view/theme/default/template/common/header.tpl",
+		"/D/projects/xander work/megamag/back/catalog/view/theme/default/template/product/product.tpl",
+		"/D/projects/xander work/megamag/back/tunnel-old.php",
+		"/C/Users/saur/Desktop/test.html",
+		"/C/Users/saur/AppData/Local/Temp/tunnel-1.php",
+		"/C/Users/saur/AppData/Local/Temp/tunnel.php",
+		"/C/Users/saur/AppData/Local/Temp/Rar$DIa0.840/jquery.selectBox.css",
+		"/D/projects/xander work/megamag/back/catalog/controller/common/header.php",
+		"/D/projects/xander work/megamag/back/catalog/view/theme/megamag/template/account/order_list.tpl",
+		"/D/projects/xander work/megamag/back/catalog/view/theme/megamag/template/account/account.tpl",
+		"/D/projects/xander work/megamag/front/history.html",
+		"/D/projects/xander work/megamag/front/setting.html",
+		"/D/projects/xander work/megamag/back/catalog/view/theme/megamag/template/information/news.tpl",
+		"/D/projects/xander work/megamag/front/stat.html",
+		"/D/projects/xander work/megamag/front/news.html",
+		"/D/projects/xander work/megamag/back/catalog/view/theme/megamag/template/product/product.tpl",
+		"/D/projects/xander work/megamag/front/product.html",
+		"/D/projects/xander work/megamag/front/404.html",
+		"/D/projects/xander work/megamag/back/catalog/view/theme/megamag/template/product/category.tpl",
+		"/D/projects/xander work/megamag/back/catalog/view/theme/megamag/template/common/header.tpl",
+		"/D/projects/xander work/megamag/back/catalog/view/theme/megamag/template/forms/city_chooser.html",
+		"/D/projects/xander work/megamag/back/admin/view/javascript/bootstrap/css/bootstrap.css",
+		"/D/projects/xander work/megamag/back/catalog/view/theme/megamag/stylesheet/custom.css",
+		"/D/projects/xander work/megamag/back/catalog/view/theme/megamag/template/common/cart.tpl",
+		"/D/projects/xander work/megamag/back/catalog/view/theme/megamag/javascript/popup_handler.js",
+		"/D/projects/xander work/megamag/back/catalog/view/theme/megamag/template/forms/callback.html",
+		"/D/projects/xander work/megamag/back/catalog/controller/product/product.php",
+		"/D/projects/xander work/megamag/front/index2.html",
+		"/D/projects/xander work/megamag/back/catalog/view/theme/megamag/template/checkout/cart.tpl",
+		"/D/projects/xander work/megamag/back/catalog/view/theme/megamag/template/forms/feedback.html",
+		"/D/projects/xander work/megamag/front/login.html",
+		"/D/projects/xander work/megamag/back/catalog/view/theme/megamag/template/extension/module/featured.tpl",
+		"/D/projects/xander work/megamag/back/catalog/view/theme/megamag/javascript/jquery.magnific-popup.min.js",
+		"/D/projects/games/HexMyWorld/",
+		"/D/projects/xander work/megamag/front/cart3.html",
+		"/D/projects/xander work/megamag/front/cart4.html",
+		"/D/projects/test_me/r.py",
+		"/D/projects/xander work/megamag/back/catalog/view/theme/megamag/template/checkout/checkout.tpl",
+		"/D/projects/xander work/megamag/front/cart2.html",
+		"/D/projects/xander work/megamag/front/index1.html",
+		"/D/projects/xander work/megamag/back/.gitignore",
+		"/D/projects/xander work/megamag/back/catalog/model/catalog/category.php",
+		"/D/projects/xander work/megamag/back/catalog/controller/product/category.php",
+		"/D/projects/xander work/megamag/back/catalog/view/theme/megamag/template/information/news_list.tpl",
+		"/D/projects/xander work/megamag/1c-opencart/OpenCart_1.x_2.x_UF_4.0.epf",
+		"/C/Users/saur/Downloads/tunnel.php",
+		"/D/projects/xander work/megamag/back/catalog/view/theme/default/template/common/cart.tpl",
+		"/D/projects/xander work/megamag/front/cart1.html",
+		"/D/projects/xander work/megamag/back/catalog/controller/common/cart.php",
+		"/D/projects/xander work/megamag/back/catalog/controller/extension/module/featured.php",
+		"/D/projects/xander work/megamag/back/catalog/model/catalog/product.php",
+		"/D/projects/xander work/megamag/back/catalog/view/theme/megamag/template/common/success.tpl",
+		"/D/projects/xander work/megamag/back/sftp-config.json",
+		"/D/projects/xander work/megamag/back/catalog/view/theme/megamag/template/common/home.tpl",
+		"/D/projects/xander work/megamag/back/catalog/view/theme/megamag/template/extension/module/categoryfeatured.tpl",
+		"/D/projects/xander work/megamag/back/catalog/view/theme/megamag/template/common/content_top.tpl",
+		"/D/projects/xander work/megamag/back/catalog/view/theme/megamag/template/common/column_right.tpl",
+		"/D/projects/xander work/megamag/back/catalog/view/theme/megamag/template/common/column_left.tpl",
+		"/D/projects/xander work/megamag/front/index.html",
+		"/D/projects/xander work/megamag/back/catalog/view/theme/megamag/stylesheet/stylesheet.css",
+		"/D/projects/xander work/megamag/back/catalog/view/theme/megamag/template/extension/module/news.tpl",
+		"/D/projects/xander work/megamag/back/catalog/controller/account/register.php",
+		"/D/projects/xander work/megamag/back/catalog/view/theme/megamag/template/account/register.tpl",
+		"/D/projects/xander work/megamag/front/register.html",
+		"/D/projects/xander work/megamag/back/catalog/view/theme/megamag/template/account/login.tpl",
+		"/D/projects/xander work/megamag/back/catalog/view/theme/default/template/product/category.tpl",
+		"/D/projects/xander work/megamag/back/catalog/view/theme/megamag/template/extension/module/category.tpl",
+		"/C/Users/saur/Desktop/booking-flowers.pkcs7",
+		"/D/projects/xander work/klumba/стянутое/Букет с хризантемой - Букет из Хризантемы сорта Гагарин_files/a_data_002/ace1aea2accb748844263a388372590638e3e499.css",
+		"/D/projects/xander work/мгт/back/mgt/templates/personal/progress.html",
+		"/D/projects/xander work/мгт/back/mgt/templates/base.html",
+		"/D/projects/xander work/мгт/back/mgt/static/coffee/logreg.coffee",
+		"/D/projects/xander work/мгт/back/mgt/static/js/logreg.js",
+		"/D/projects/xander work/мгт/back/mgt/templates/calculation.html",
+		"/D/projects/xander work/мгт/back/mgt/templates/personal/pbase.html",
+		"/D/projects/xander work/мгт/back/mgt/templates/personal/quests.html",
+		"/D/projects/xander work/мгт/back/mgt/templates/personal/balance.html",
+		"/D/projects/xander work/мгт/back/mgt/templates/personal/statistic.html",
+		"/D/projects/xander work/мгт/back/mgt/static/coffee/calculation.coffee",
+		"/D/projects/xander work/мгт/back/mgt/templates/dealers.html",
+		"/C/Users/saur/Downloads/тест_06-03-2017_13-30-30.geojson",
+		"/C/Users/saur/Desktop/hex.html",
+		"/D/projects/xander work/мгт/front/js/lib/js.cookie.js",
+		"/D/projects/xander work/мгт/front/js/global.js",
+		"/D/projects/sashka/RequestService/sftp-config.json"
+	],
+	"find":
+	{
+		"height": 38.0
+	},
+	"find_in_files":
+	{
+		"height": 106.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "game.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1170,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1170,
+								1170
+							]
+						],
+						"settings":
+						{
+							"auto_name": "",
+							"incomplete_sync": null,
+							"syntax": "Packages/Python/Python.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 38.0
+	},
+	"input":
+	{
+		"height": 38.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 461.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.git":
+	{
+		"height": 135.0
+	},
+	"output.sftp":
+	{
+		"height": 294.0
+	},
+	"pinned_build_system": "Packages/User/python3.sublime-build",
+	"project": "my_cool_p.sublime-project",
+	"replace":
+	{
+		"height": 72.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"mode",
+				"1cengine/site/css/modern_style.css"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"D:\\projects\\tensor\\TenderRobots\\sbis3-tender\\sbis3-tender.sublime-project"
+			],
+			[
+				"tr",
+				"/home/saur/web/master_trimet/trimet.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 305.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
