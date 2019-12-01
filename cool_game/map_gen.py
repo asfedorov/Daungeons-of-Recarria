@@ -173,7 +173,7 @@ class Map:
         up_room = random.choice(self._rooms)
         down_room = random.choice(self._rooms)
 
-        up_coord = self._get_random_open_tile_from_room(up_room, is_near_wall=False)
+        up_coord = self._get_random_open_tile_from_room(up_room, is_near_wall=True)
         self._field[up_coord[0]][up_coord[1]] = UP_TILE
 
         down_coord = self._get_random_open_tile_from_room(down_room, is_near_wall=False)
