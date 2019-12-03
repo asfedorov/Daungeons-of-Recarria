@@ -8,7 +8,8 @@ class BaseTileManager:
     _tile_size = None, None
 
     def __init__(self):
-        self.tiles = self._load_tiles_grid()
+        self.images = self._load_tiles_grid()
+        self.tiles = self.images.get_texture_sequence()
 
     def _load_tiles_grid(self):
         img = pyglet.image.load(self._asset_path)
@@ -18,7 +19,7 @@ class BaseTileManager:
             self._sheet_size[1]//self._tile_size[1],
             item_height=self._tile_size[0],
             item_width=self._tile_size[1]
-        ).get_texture_sequence()
+        )
 
 
 class DungeonTiles(BaseTileManager):
@@ -28,6 +29,10 @@ class DungeonTiles(BaseTileManager):
     _tile_size = 16, 16
 
     _row_len = _sheet_size[1]//_tile_size[1]
+
+    def __init__(self):
+        self.images = self._load_tiles_grid()
+        self.tiles = self.images
 
     def _get_floor_tiles(self):
         return self.tiles[

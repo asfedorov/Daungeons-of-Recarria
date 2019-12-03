@@ -77,10 +77,10 @@ class Player(cocos.cocosnode.CocosNode):
         super().__init__()
 
         player_tiles = sprites_loader.PlayerTiles()
-        self.down = cocos.sprite.Sprite(pyglet.image.Animation.from_image_sequence(player_tiles.down, 0.4))
-        self.left = cocos.sprite.Sprite(pyglet.image.Animation.from_image_sequence(player_tiles.left, 0.4))
-        self.right = cocos.sprite.Sprite(pyglet.image.Animation.from_image_sequence(player_tiles.left, 0.4))
-        self.up = cocos.sprite.Sprite(pyglet.image.Animation.from_image_sequence(player_tiles.up, 0.4))
+        self.down = cocos.sprite.Sprite(pyglet.image.Animation.from_image_sequence(player_tiles.down, 0.2))
+        self.left = cocos.sprite.Sprite(pyglet.image.Animation.from_image_sequence(player_tiles.left, 0.2))
+        self.right = cocos.sprite.Sprite(pyglet.image.Animation.from_image_sequence(player_tiles.left, 0.2))
+        self.up = cocos.sprite.Sprite(pyglet.image.Animation.from_image_sequence(player_tiles.up, 0.2))
 
         self.right.scale_x = -1
 
@@ -170,7 +170,7 @@ class PlayerLayer(cocos.layer.ScrollableLayer):
 
         self.player.movement_precision = (
             (self.player.speed * speed_kf) / (clock.get_fps() or 60)
-        ) * 3
+        ) * ((clock.get_fps() or 60) / 10) * 3
 
         if x != 0:
             x = self.player.movement_precision * (-1 if x < 0 else 1)
