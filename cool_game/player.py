@@ -139,8 +139,8 @@ class PlayerLayer(cocos.layer.ScrollableLayer):
 
         self.player.cshape = cm.AARectShape(
             self.player.position,
-            48//6,
-            48//6
+            48//8,
+            48//8
         )
 
         self.add(self.player)

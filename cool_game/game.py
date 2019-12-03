@@ -10,16 +10,16 @@ if __name__ == "__main__":
     cocos.director.director.init(
         width=width,
         height=height,
-        vsync=False,
+        vsync=True,
         autoscale=True,
         # resizable=True
     )
     cocos.director.director.show_FPS = True
 
     dungeon_layer = DungeonLayer(
+        74,
         32,
-        16,
-        3,
+        13,
         viewport=cocos.rect.Rect(0, 0, 800, 600)
     )
     player_layer = PlayerLayer(dungeon_layer.floor_layer.start_point)
