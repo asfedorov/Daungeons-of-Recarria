@@ -251,6 +251,11 @@ class FloorLayer(MyRectMapLayer):
         self.px_width = width * 16 * 1.5
         self.px_height = height * 16 * 1.5
 
+    def get_visible_cells(self):
+        x, y = self.view_x / 1.5, self.view_y / 1.5
+        w, h = self.view_w, self.view_h
+        return self.get_in_region(x, y, x + w, y + h)
+
 
 class DungeonLayer(cocos.layer.ScrollingManager):
     def __init__(self, width, height, rooms, viewport=None):

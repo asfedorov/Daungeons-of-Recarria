@@ -17,7 +17,7 @@ if __name__ == "__main__":
     cocos.director.director.show_FPS = True
 
     dungeon_layer = DungeonLayer(
-        74,
+        48,
         32,
         13,
         viewport=cocos.rect.Rect(0, 0, 800, 600)
