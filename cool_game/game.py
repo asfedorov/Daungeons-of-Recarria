@@ -12,13 +12,14 @@ if __name__ == "__main__":
         height=height,
         vsync=True,
         autoscale=True,
+        fullscreen=True,
         # resizable=True
     )
-    cocos.director.director.show_FPS = True
+    # cocos.director.director.show_FPS = True
 
     dungeon_layer = DungeonLayer(
+        74,
         48,
-        32,
         13,
         viewport=cocos.rect.Rect(0, 0, 800, 600)
     )
