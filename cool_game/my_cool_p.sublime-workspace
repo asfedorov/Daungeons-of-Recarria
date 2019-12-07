@@ -4,6 +4,114 @@
 		"selected_items":
 		[
 			[
+				"menu",
+				"menu_layer\t(statement)"
+			],
+			[
+				"dire",
+				"direction_sides\t(statement)"
+			],
+			[
+				"map",
+				"map_height\t(statement)"
+			],
+			[
+				"re",
+				"reverse_h\t(param)"
+			],
+			[
+				"_scale",
+				"_scale_me\t(statement)"
+			],
+			[
+				"_to",
+				"_to_shade\t(statement)"
+			],
+			[
+				"vi",
+				"view_block\t(param)"
+			],
+			[
+				"wa",
+				"watch_hex\t(statement)"
+			],
+			[
+				"view",
+				"view_block"
+			],
+			[
+				"ce",
+				"cell_pos\t(forstmt)"
+			],
+			[
+				"get",
+				"get_cell"
+			],
+			[
+				"g",
+				"get_cell"
+			],
+			[
+				"set",
+				"set_view\t(function)"
+			],
+			[
+				"cell",
+				"cells_dict\t(statement)"
+			],
+			[
+				"pos",
+				"pos_y_diff\t(statement)"
+			],
+			[
+				"pla",
+				"player_y\t(statement)"
+			],
+			[
+				"pl",
+				"player_layer\t(statement)"
+			],
+			[
+				"W",
+				"WATER_TILE\t(statement)"
+			],
+			[
+				"WA",
+				"WALL_ERODE_TILE\t(statement)"
+			],
+			[
+				"coll",
+				"collisions_managers\t(module)"
+			],
+			[
+				"flo",
+				"floor_layer\t(statement)"
+			],
+			[
+				"Base",
+				"BaseTileManager\t(class)"
+			],
+			[
+				"_get",
+				"_get_floor_self"
+			],
+			[
+				"co",
+				"collision_manager"
+			],
+			[
+				"s",
+				"sprite_obj"
+			],
+			[
+				"spri",
+				"sprites_loader"
+			],
+			[
+				"ret",
+				"return_inverse"
+			],
+			[
 				"fie",
 				"field_string"
 			],
@@ -192,10 +300,6 @@
 				"hitObject"
 			],
 			[
-				"coll",
-				"collider\tContactPoint2D.*"
-			],
-			[
 				"Screepo",
 				"ScreenPointToRay\tCamera.*(position)"
 			],
@@ -228,10 +332,6 @@
 				"phone_number"
 			],
 			[
-				"co",
-				"color"
-			],
-			[
 				"te",
 				"text-decoration"
 			],
@@ -254,10 +354,6 @@
 			[
 				"fon",
 				"font-family"
-			],
-			[
-				"re",
-				"repeat-x"
 			],
 			[
 				"f",
@@ -306,10 +402,6 @@
 			[
 				"order",
 				"order_by"
-			],
-			[
-				"get",
-				"get_lots_test"
 			],
 			[
 				"di",
@@ -422,98 +514,6 @@
 			[
 				"sup",
 				"supl_views\t(module)"
-			],
-			[
-				"user_profile",
-				"user_profile_ref"
-			],
-			[
-				"Req",
-				"Request\t(class)"
-			],
-			[
-				"lo",
-				"log_user\t(function)"
-			],
-			[
-				"Use",
-				"UserLog\t(class)"
-			],
-			[
-				"ap",
-				"api_views\t(module)"
-			],
-			[
-				"pro",
-				"proxy_list\t(globalstmt)"
-			],
-			[
-				"USER",
-				"USE_PROXY\t(statement)"
-			],
-			[
-				"url",
-				"url_body\t(statement)"
-			],
-			[
-				"messa",
-				"message\t(function)"
-			],
-			[
-				"device",
-				"device_ios\t(statement)"
-			],
-			[
-				"time",
-				"timedelta\t(class)"
-			],
-			[
-				"appl",
-				"appliance\t(forstmt)"
-			],
-			[
-				"apply",
-				"apply_list_db\t(statement)"
-			],
-			[
-				"Re",
-				"RequestApply\t(class)"
-			],
-			[
-				"dele",
-				"deleted"
-			],
-			[
-				"hash",
-				"hashlib\t(module)"
-			],
-			[
-				"ha",
-				"hash\t(function)"
-			],
-			[
-				"mnt_s",
-				"mnt_subscriber_id\t(statement)"
-			],
-			[
-				"csrf",
-				"csrf_exempt"
-			],
-			[
-				"geo",
-				"geo_code"
-			],
-			[
-				"ope",
-				"operator\t(module)"
-			],
-			[
-				"devi",
-				"device\t(statement)"
-			],
-			[
-				"rat",
-				"rating_count"
 			]
 		]
 	},
@@ -523,13 +523,131 @@
 			"file": "game.py",
 			"settings":
 			{
-				"buffer_size": 1170,
+				"buffer_size": 600,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
+		},
+		{
+			"file": "/home/saur/projects/my_cool_project/venv/lib/python3.7/site-packages/cocos/director.py",
+			"settings":
+			{
+				"buffer_size": 27617,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "scenes/game.py",
+			"settings":
+			{
+				"buffer_size": 1234,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "scenes/menus.py",
+			"settings":
+			{
+				"buffer_size": 431,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "layers/menus.py",
+			"settings":
+			{
+				"buffer_size": 1319,
+				"encoding": "UTF-8",
+				"line_ending": "Unix",
+				"name": "menus"
+			}
+		},
+		{
+			"file": "layers/map_layers.py",
+			"settings":
+			{
+				"buffer_size": 16843,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "layers/player.py",
+			"settings":
+			{
+				"buffer_size": 7503,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/saur/projects/my_cool_project/venv/lib/python3.7/site-packages/cocos/tiles.py",
+			"settings":
+			{
+				"buffer_size": 61636,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/home/saur/projects/my_cool_project/venv/lib/python3.7/site-packages/cocos/layer/scrolling.py",
+			"settings":
+			{
+				"buffer_size": 19605,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/home/saur/projects/my_cool_project/venv/lib/python3.7/site-packages/cocos/rect.py",
+			"settings":
+			{
+				"buffer_size": 11344,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/home/saur/projects/my_cool_project/venv/lib/python3.7/site-packages/cocos/layer/base_layers.py",
+			"settings":
+			{
+				"buffer_size": 4745,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/home/saur/projects/my_cool_project/venv/lib/python3.7/site-packages/cocos/cocosnode.py",
+			"settings":
+			{
+				"buffer_size": 31646,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/home/saur/projects/my_cool_project/venv/lib/python3.7/site-packages/cocos/sprite.py",
+			"settings":
+			{
+				"buffer_size": 13353,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/home/saur/projects/my_cool_project/venv/lib/python3.7/site-packages/cocos/actions/move_actions.py",
+			"settings":
+			{
+				"buffer_size": 7465,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/home/saur/projects/my_cool_project/venv/lib/python3.7/site-packages/cocos/actions/base_actions.py",
+			"settings":
+			{
+				"buffer_size": 33849,
+				"line_ending": "Windows"
+			}
 		}
 	],
-	"build_system": "",
+	"build_system": "Packages/Rust/Rust.sublime-build",
 	"build_system_choices":
 	[
 		[
@@ -567,6 +685,50 @@
 				"Packages/Python/Python.sublime-build",
 				""
 			]
+		],
+		[
+			[
+				[
+					"Packages/Python/Python.sublime-build",
+					""
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					"Syntax Check"
+				],
+				[
+					"Packages/Virtualenv/Python + Virtualenv.sublime-build",
+					""
+				],
+				[
+					"Packages/User/python3.sublime-build",
+					""
+				]
+			],
+			[
+				"Packages/Python/Python.sublime-build",
+				""
+			]
+		],
+		[
+			[
+				[
+					"Packages/Rust/Rust.sublime-build",
+					""
+				],
+				[
+					"Packages/Rust/Rust.sublime-build",
+					"Run"
+				],
+				[
+					"Packages/Rust/Rust.sublime-build",
+					"Build & Run"
+				]
+			],
+			[
+				"Packages/Rust/Rust.sublime-build",
+				""
+			]
 		]
 	],
 	"build_varint": "",
@@ -577,12 +739,20 @@
 		"selected_items":
 		[
 			[
-				"upl",
-				"SFTP: Upload File"
-			],
-			[
 				"inst",
 				"Package Control: Install Package"
+			],
+			[
+				"virt",
+				"Virtualenv: Activate"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"upl",
+				"SFTP: Upload File"
 			],
 			[
 				"git h",
@@ -635,10 +805,6 @@
 			[
 				"json",
 				"JSON Reindent: reindent file or selection"
-			],
-			[
-				"ins",
-				"Package Control: Install Package"
 			],
 			[
 				"jso",
@@ -1013,9 +1179,55 @@
 	},
 	"console":
 	{
-		"height": 723.0,
+		"height": 391.0,
 		"history":
 		[
+			"2600 / 10",
+			"2600 - 10%",
+			"40*65",
+			"3 % 2",
+			"2 % 2",
+			"1 % 2",
+			"0 % 2",
+			"12 * 12 // 100",
+			"12 * 12 // 10",
+			"72* 72 // 10",
+			"72*72",
+			"print([zz for zz in z])",
+			"z = range(10, 0)",
+			"print([zz for zz in z])",
+			"print(zz in z)",
+			"for zz in z:\\n    print(zz)",
+			"for zz in z:    print(zz)",
+			"for zz in z: print(zz);",
+			"for zz in z: print(zz)",
+			"for zz in z:",
+			"z",
+			"z = range(0, 10)",
+			"b & z",
+			"z - b",
+			"b - z",
+			"b",
+			"a",
+			"z",
+			"z = {3, 4, 5}",
+			"a",
+			"a | b",
+			"a",
+			"a & b",
+			"a = {1,2}",
+			"a",
+			"a = a & b",
+			"a = a + b",
+			"a.add(b)",
+			"b = {4,3}",
+			"a = {1,2}",
+			"a.values()",
+			"a",
+			"a = {1: [1,2,3], 2: [5,6,6]}",
+			"a = {1: [1,2,3], 2: [5,6,6]]",
+			"range(10, 0 )",
+			"320/16",
 			"'Очистка RawData временно отключены.\\n Задача %r отброшена' % request",
 			"request = 'asdasd'",
 			"import requests",
@@ -1097,53 +1309,7 @@
 			"a[0] = \"1\"",
 			"a[0] = 1",
 			"a = \"abs\"",
-			"0 == \"\"",
-			"12 != \"\"",
-			"if a: c",
-			"if a: -> c",
-			"if a: c",
-			"if a: print(1)",
-			"if a: print 1;",
-			"if a: print 1",
-			"bool(c)",
-			"bool(a)",
-			"c = False",
-			"if a",
-			"a = \"asd\"",
-			"ns",
-			"ns = ns + str(random.randrange(1000, 9999))",
-			"ns",
-			"ns = datetime.datetime.strftime(ct, '%y%m%d%S')",
-			"ns = datetime.datetime.strftime(ct, '%y%m%d%S)",
-			"ct = datetime.datetime.now()",
-			"import random",
-			"import datetime",
-			"a",
-			"a = True and False",
-			"a",
-			"a = True and True",
-			"a = True and Ture",
-			"a = true and true",
-			"a[0]",
-			"a[1]",
-			"a[1:]",
-			"a = \"b123\"",
-			"int(0.76)",
-			"234/100",
-			"176/100",
-			"76/100",
-			"a[:-1]",
-			"a = []",
-			"b.__xor__(True)",
-			"b = False",
-			"a.__xor__(True)",
-			"a.__xor__(False)",
-			"a.xor(False)",
-			"a = True",
-			"n",
-			"n = random.randint(0,5)",
-			"n",
-			"n = random.randint(0,5)"
+			"0 == \"\""
 		]
 	},
 	"distraction_free":
@@ -1158,10 +1324,44 @@
 	"expanded_folders":
 	[
 		"/home/saur/projects/my_cool_project",
-		"/home/saur/projects/my_cool_project/cool_game"
+		"/home/saur/projects/my_cool_project/cool_game",
+		"/home/saur/projects/my_cool_project/cool_game/layers",
+		"/home/saur/projects/my_cool_project/cool_game/scenes",
+		"/home/saur/projects/my_cool_project/map",
+		"/home/saur/projects/my_cool_project/venv",
+		"/home/saur/projects/my_cool_project/venv/lib",
+		"/home/saur/projects/my_cool_project/venv/lib/python3.7",
+		"/home/saur/projects/my_cool_project/venv/lib/python3.7/site-packages",
+		"/home/saur/projects/my_cool_project/venv/lib/python3.7/site-packages/cocos"
 	],
 	"file_history":
 	[
+		"/home/saur/projects/my_cool_project/cool_game/collisions_managers.py",
+		"/home/saur/projects/my_cool_project/cool_game/sprites_loader.py",
+		"/home/saur/projects/my_cool_project/cool_game/map_gen.py",
+		"/home/saur/projects/my_cool_project/cool_game/utils.py",
+		"/home/saur/projects/my_cool_project/cool_game/map_layers.py",
+		"/home/saur/projects/my_cool_project/cool_game/player.py",
+		"/home/saur/projects/my_cool_project/cool_game/layers.py",
+		"/home/saur/projects/my_cool_project/cool_game/menus.py",
+		"/home/saur/projects/my_cool_project/venv/lib/python3.7/site-packages/pyglet/sprite.py",
+		"/home/saur/projects/my_cool_project/venv/lib/python3.7/site-packages/cocos/layer/scrolling.py",
+		"/home/saur/projects/my_cool_project/venv/lib/python3.7/site-packages/cocos/layer/base_layers.py",
+		"/home/saur/projects/my_cool_project/venv/lib/python3.7/site-packages/cocos/director.py",
+		"/home/saur/projects/my_cool_project/venv/lib/python3.7/site-packages/pyglet/clock.py",
+		"/home/saur/projects/my_cool_project/venv/lib/python3.7/site-packages/pyglet/info.py",
+		"/home/saur/projects/my_cool_project/venv/lib/python3.7/site-packages/pyglet/gl/__init__.py",
+		"/home/saur/projects/my_cool_project/venv/lib/python3.7/site-packages/pyglet/window/xlib/__init__.py",
+		"/home/saur/projects/my_cool_project/venv/lib/python3.7/site-packages/cocos/actions/move_actions.py",
+		"/home/saur/.config/sublime-text-3/Packages/User/SublimePython.sublime-settings",
+		"/home/saur/.config/sublime-text-3/Packages/SublimePythonIDE/SublimePython.sublime-settings",
+		"/home/saur/projects/my_cool_project/cool_game/my_cool_p.sublime-project",
+		"/home/saur/projects/my_cool_project/venv/lib/python3.7/site-packages/pyglet/window/__init__.py",
+		"/home/saur/projects/my_cool_project/venv/lib/python3.7/site-packages/pyglet/gl/cocoa.py",
+		"/home/saur/projects/my_cool_project/venv/lib/python3.7/site-packages/pyglet/gl/xlib.py",
+		"/home/saur/projects/my_cool_project/venv/lib/python3.7/site-packages/pyglet/gl/glxext_arb.py",
+		"/home/saur/projects/my_cool_project/venv/lib/python3.7/site-packages/pyglet/text/__init__.py",
+		"/home/saur/projects/my_cool_project/venv/lib/python3.7/site-packages/cocos/fps.py",
 		"/C/Users/saur/Desktop/UpdateProxySettingsFix.orx",
 		"/C/Users/saur/Desktop/UpdateProxySettingsProd.orx",
 		"/C/Users/saur/AppData/Local/Temp/Rar$DIa0.711/UpdateProxySettingsProd.orx",
@@ -1263,43 +1463,18 @@
 		"/D/projects/xander work/megamag/back/catalog/view/theme/megamag/template/common/content_top.tpl",
 		"/D/projects/xander work/megamag/back/catalog/view/theme/megamag/template/common/column_right.tpl",
 		"/D/projects/xander work/megamag/back/catalog/view/theme/megamag/template/common/column_left.tpl",
-		"/D/projects/xander work/megamag/front/index.html",
-		"/D/projects/xander work/megamag/back/catalog/view/theme/megamag/stylesheet/stylesheet.css",
-		"/D/projects/xander work/megamag/back/catalog/view/theme/megamag/template/extension/module/news.tpl",
-		"/D/projects/xander work/megamag/back/catalog/controller/account/register.php",
-		"/D/projects/xander work/megamag/back/catalog/view/theme/megamag/template/account/register.tpl",
-		"/D/projects/xander work/megamag/front/register.html",
-		"/D/projects/xander work/megamag/back/catalog/view/theme/megamag/template/account/login.tpl",
-		"/D/projects/xander work/megamag/back/catalog/view/theme/default/template/product/category.tpl",
-		"/D/projects/xander work/megamag/back/catalog/view/theme/megamag/template/extension/module/category.tpl",
-		"/C/Users/saur/Desktop/booking-flowers.pkcs7",
-		"/D/projects/xander work/klumba/стянутое/Букет с хризантемой - Букет из Хризантемы сорта Гагарин_files/a_data_002/ace1aea2accb748844263a388372590638e3e499.css",
-		"/D/projects/xander work/мгт/back/mgt/templates/personal/progress.html",
-		"/D/projects/xander work/мгт/back/mgt/templates/base.html",
-		"/D/projects/xander work/мгт/back/mgt/static/coffee/logreg.coffee",
-		"/D/projects/xander work/мгт/back/mgt/static/js/logreg.js",
-		"/D/projects/xander work/мгт/back/mgt/templates/calculation.html",
-		"/D/projects/xander work/мгт/back/mgt/templates/personal/pbase.html",
-		"/D/projects/xander work/мгт/back/mgt/templates/personal/quests.html",
-		"/D/projects/xander work/мгт/back/mgt/templates/personal/balance.html",
-		"/D/projects/xander work/мгт/back/mgt/templates/personal/statistic.html",
-		"/D/projects/xander work/мгт/back/mgt/static/coffee/calculation.coffee",
-		"/D/projects/xander work/мгт/back/mgt/templates/dealers.html",
-		"/C/Users/saur/Downloads/тест_06-03-2017_13-30-30.geojson",
-		"/C/Users/saur/Desktop/hex.html",
-		"/D/projects/xander work/мгт/front/js/lib/js.cookie.js",
-		"/D/projects/xander work/мгт/front/js/global.js",
-		"/D/projects/sashka/RequestService/sftp-config.json"
+		"/D/projects/xander work/megamag/front/index.html"
 	],
 	"find":
 	{
-		"height": 38.0
+		"height": 40.0
 	},
 	"find_in_files":
 	{
 		"height": 106.0,
 		"where_history":
 		[
+			"/home/saur/projects/my_cool_project/venv/lib/python3.7/site-packages/pyglet/window"
 		]
 	},
 	"find_state":
@@ -1307,6 +1482,16 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"_tile_size",
+			"1.5",
+			"scale_x",
+			"_row_len",
+			"_self.tiles(",
+			"tiles",
+			"320//16",
+			"vsync",
+			"Window",
+			"vsync"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -1314,6 +1499,10 @@
 		"regex": false,
 		"replace_history":
 		[
+			"self._row_len",
+			"_tiles(",
+			"self.tiles",
+			"_row_len"
 		],
 		"reverse": false,
 		"show_context": true,
@@ -1333,22 +1522,26 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1170,
+						"buffer_size": 600,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1170,
-								1170
+								39,
+								39
 							]
 						],
 						"settings":
 						{
 							"auto_name": "",
 							"incomplete_sync": null,
-							"syntax": "Packages/Python/Python.sublime-syntax"
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -1356,13 +1549,471 @@
 					},
 					"stack_index": 0,
 					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/home/saur/projects/my_cool_project/venv/lib/python3.7/site-packages/cocos/director.py",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 27617,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 6240.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "scenes/game.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1234,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								338,
+								338
+							]
+						],
+						"settings":
+						{
+							"auto_name": "",
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "scenes/menus.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 431,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								360,
+								360
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Python/Python.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "layers/menus.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1319,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								953,
+								953
+							]
+						],
+						"settings":
+						{
+							"auto_name": "menus",
+							"incomplete_sync": null,
+							"syntax": "Packages/Python/Python.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "layers/map_layers.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 16843,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								388,
+								388
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 2483.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "layers/player.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 7503,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								6340,
+								6340
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 2042.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "/home/saur/projects/my_cool_project/venv/lib/python3.7/site-packages/cocos/tiles.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 61636,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								30239,
+								30239
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 12296.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "/home/saur/projects/my_cool_project/venv/lib/python3.7/site-packages/cocos/layer/scrolling.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 19605,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								13484,
+								13484
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 4418.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "/home/saur/projects/my_cool_project/venv/lib/python3.7/site-packages/cocos/rect.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 11344,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1944,
+								1944
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 887.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 10,
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "/home/saur/projects/my_cool_project/venv/lib/python3.7/site-packages/cocos/layer/base_layers.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4745,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2546,
+								2546
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 921.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 12,
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "/home/saur/projects/my_cool_project/venv/lib/python3.7/site-packages/cocos/cocosnode.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 31646,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								30088,
+								30088
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 11750.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 11,
+					"type": "text"
+				},
+				{
+					"buffer": 12,
+					"file": "/home/saur/projects/my_cool_project/venv/lib/python3.7/site-packages/cocos/sprite.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 13353,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3161,
+								3161
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1961.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 13,
+					"file": "/home/saur/projects/my_cool_project/venv/lib/python3.7/site-packages/cocos/actions/move_actions.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 7465,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3221,
+								3221
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 943.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 14,
+					"type": "text"
+				},
+				{
+					"buffer": 14,
+					"file": "/home/saur/projects/my_cool_project/venv/lib/python3.7/site-packages/cocos/actions/base_actions.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 33849,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								14283,
+								14283
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 5103.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 13,
+					"type": "text"
 				}
 			]
 		}
 	],
 	"incremental_find":
 	{
-		"height": 38.0
+		"height": 22.0
 	},
 	"input":
 	{
@@ -1393,7 +2044,7 @@
 	"menu_visible": true,
 	"output.exec":
 	{
-		"height": 461.0
+		"height": 197.0
 	},
 	"output.find_results":
 	{
@@ -1407,11 +2058,11 @@
 	{
 		"height": 294.0
 	},
-	"pinned_build_system": "Packages/User/python3.sublime-build",
+	"pinned_build_system": "Packages/Virtualenv/Python + Virtualenv.sublime-build",
 	"project": "my_cool_p.sublime-project",
 	"replace":
 	{
-		"height": 72.0
+		"height": 40.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -1435,7 +2086,7 @@
 		[
 			[
 				"",
-				"D:\\projects\\tensor\\TenderRobots\\sbis3-tender\\sbis3-tender.sublime-project"
+				"/data/projects/sashka/RequestService/rs.sublime-project"
 			],
 			[
 				"tr",
