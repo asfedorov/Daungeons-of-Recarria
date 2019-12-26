@@ -1,6 +1,6 @@
 import sqlite3
 
-import constants
+from . import constants
 
 
 class ValidationError(Exception):
@@ -90,6 +90,8 @@ class SQLModel:
 
         result = {}
         record = cur.fetchone()
+        if not record:
+            return None
         for idx, col in enumerate(cur.description):
             result[col[0]] = record[idx]
         conn.close()
@@ -295,6 +297,8 @@ class Humanoid(BasicModel):
     @classmethod
     def get_by_pk(cls, pk):
         record = cls._get_by_pk(pk)
+        if not record:
+            return None
         record_cls = cls
         for kind_cls in cls.KINDS_AVAILABLE:
             if record['kind'] == kind_cls.RACE_NAME:

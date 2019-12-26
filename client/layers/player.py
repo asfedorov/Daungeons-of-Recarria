@@ -7,10 +7,7 @@ from pyglet import clock
 
 import cocos.collision_model as cm
 
-from scenes import menus
 from utils import sprites_loader
-from utils.collisions_managers import PLAYER_WALL_COLLISION_MANAGER
-from utils.collisions_managers import PLAYER_WATER_COLLISION_MANAGER
 from utils.utils import Vector2
 
 
@@ -32,7 +29,7 @@ class PlayerMove(Move):
         i = 0
         while i < 4:
             self.target.cshape.center = x, self.target.cshape.center[1]
-            collisions = PLAYER_WALL_COLLISION_MANAGER.objs_colliding(self.target)
+            collisions = self.target.parent.parent.PLAYER_WALL_COLLISION_MANAGER.objs_colliding(self.target)
             if collisions:
                 self.target.cshape.center = old_x, self.target.cshape.center[1]
                 if x < old_x:
@@ -50,7 +47,7 @@ class PlayerMove(Move):
         i = 0
         while i < 4:
             self.target.cshape.center = self.target.cshape.center[0], y
-            collisions = PLAYER_WALL_COLLISION_MANAGER.objs_colliding(self.target)
+            collisions = self.target.parent.parent.PLAYER_WALL_COLLISION_MANAGER.objs_colliding(self.target)
             if collisions:
                 self.target.cshape.center = self.target.cshape.center[0], old_y
                 if x < old_x:
@@ -89,6 +86,7 @@ class Player(cocos.cocosnode.CocosNode):
         self.left.opacity = 0
         self.right.opacity = 0
         self.up.opacity = 0
+        self.watch_range = 10
 
         self.add(self.down)
         self.add(self.left)
@@ -124,12 +122,13 @@ class PlayerLayer(cocos.layer.ScrollableLayer):
     _tile_size = Vector2(48, 48)
     _base_speed = 1.5
 
-    def __init__(self, start_point, scale_me):
+    def __init__(self, scale_me):
         super().__init__()
 
         self._scale_me = scale_me
         self._reversed = False
 
+    def set_player(self, start_point):
         self.c_face = 'down'
         self.face = self.c_face
         self.player = Player()
@@ -146,8 +145,9 @@ class PlayerLayer(cocos.layer.ScrollableLayer):
         )
 
         self.add(self.player)
-        PLAYER_WALL_COLLISION_MANAGER.add(self.player)
-        PLAYER_WATER_COLLISION_MANAGER.add(self.player)
+        self.parent.PLAYER_WALL_COLLISION_MANAGER.add(self.player)
+        self.parent.PLAYER_WATER_COLLISION_MANAGER.add(self.player)
+        self.parent.PLAYER_CAVE_COLLISION_MANAGER.add(self.player)
 
         self.player.do(PlayerMove())
 
@@ -161,7 +161,7 @@ class PlayerLayer(cocos.layer.ScrollableLayer):
         diag = False
         if x != 0 and y != 0:
             diag = True
-        collisions = PLAYER_WATER_COLLISION_MANAGER.objs_colliding(self.player)
+        collisions = self.parent.PLAYER_WATER_COLLISION_MANAGER.objs_colliding(self.player)
         if collisions:
             speed_kf = 0.33
 
@@ -169,6 +169,10 @@ class PlayerLayer(cocos.layer.ScrollableLayer):
             speed_kf = 0.66
             if collisions:
                 speed_kf = 0.25
+
+        cave_collisions = self.parent.PLAYER_CAVE_COLLISION_MANAGER.objs_colliding(self.player)
+        if cave_collisions:
+            cocos.director.director.pop()
 
         self.player.movement_precision = (
             (self.player.speed * speed_kf) / (clock.get_fps() or 60)
@@ -198,10 +202,10 @@ class PlayerLayer(cocos.layer.ScrollableLayer):
             y = self.player.movement_precision
         elif symbol == key.S:
             y = -self.player.movement_precision
-        elif symbol == key.ESCAPE:
-            ingamemanu_scene = menus.InGameMenuScene()
-            cocos.director.director.replace(ingamemanu_scene)
-            cocos.director.director.push(ingamemanu_scene)
+        # elif symbol == key.ESCAPE:
+        #     ingamemanu_scene = menus.InGameMenuScene()
+        #     cocos.director.director.replace(ingamemanu_scene)
+        #     cocos.director.director.push(ingamemanu_scene)
 
         self.player.velocity = Vector2(x, y)
 

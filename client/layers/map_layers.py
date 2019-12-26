@@ -6,9 +6,6 @@ import cocos.collision_model as cm
 
 from utils import map_gen
 from utils import sprites_loader
-from utils.collisions_managers import PLAYER_WALL_COLLISION_MANAGER
-from utils.collisions_managers import PLAYER_WATER_COLLISION_MANAGER
-
 from utils.utils import Vector2
 from .layers import MyRectCell
 from .layers import MyRectMapLayer
@@ -20,6 +17,31 @@ class DungeonLayer(cocos.layer.ScrollingManager):
     _pos_offset = 8 * _scale_me
 
     def __init__(self, dungeon_map, viewport=None):
+        self.PLAYER_WALL_COLLISION_MANAGER = cm.CollisionManagerGrid(
+            0,
+            dungeon_map.width * self._tile_size.x * self._scale_me,
+            0,
+            dungeon_map.height * self._tile_size.y * self._scale_me,
+            self._tile_size.x * self._scale_me,
+            self._tile_size.y * self._scale_me
+        )
+        self.PLAYER_WATER_COLLISION_MANAGER = cm.CollisionManagerGrid(
+            0,
+            dungeon_map.width * self._tile_size.x * self._scale_me,
+            0,
+            dungeon_map.height * self._tile_size.y * self._scale_me,
+            self._tile_size.x * self._scale_me,
+            self._tile_size.y * self._scale_me
+        )
+        self.PLAYER_CAVE_COLLISION_MANAGER = cm.CollisionManagerGrid(
+            0,
+            dungeon_map.width * self._tile_size.x * self._scale_me,
+            0,
+            dungeon_map.height * self._tile_size.y * self._scale_me,
+            self._tile_size.x * self._scale_me,
+            self._tile_size.y * self._scale_me
+        )
+
         super().__init__(
             viewport=viewport
         )
@@ -71,6 +93,7 @@ class DungeonLayer(cocos.layer.ScrollingManager):
                 image_obj = random.choice(crack_tiles)
             elif col == map_gen.CAVE_TILE:
                 image_obj = random.choice(cave_tiles)
+                sprite_obj_w = cocos.sprite.Sprite(blank_tile.get_texture())
             elif col == map_gen.WATER_TILE:
                 sprite_obj_w = cocos.sprite.Sprite(blank_tile.get_texture())
                 image_obj2 = random.choice(water_tiles)
@@ -167,21 +190,28 @@ class DungeonLayer(cocos.layer.ScrollingManager):
                         8 * self._scale_me,
                         8 * self._scale_me
                     )
-                    PLAYER_WALL_COLLISION_MANAGER.add(sprite_obj_w)
+                    self.PLAYER_WALL_COLLISION_MANAGER.add(sprite_obj_w)
                 elif col == map_gen.WALL_ERODE_TILE:
                     sprite_obj_w.cshape = cm.AARectShape(
                         sprite_obj_w.position,
                         2 * self._scale_me,
                         2 * self._scale_me
                     )
-                    PLAYER_WALL_COLLISION_MANAGER.add(sprite_obj_w)
+                    self.PLAYER_WALL_COLLISION_MANAGER.add(sprite_obj_w)
                 elif col in (map_gen.WATER_TILE, map_gen.DEEP_WATER_TILE):
                     sprite_obj_w.cshape = cm.AARectShape(
                         sprite_obj_w.position,
                         8 * self._scale_me,
                         8 * self._scale_me
                     )
-                    PLAYER_WATER_COLLISION_MANAGER.add(sprite_obj_w)
+                    self.PLAYER_WATER_COLLISION_MANAGER.add(sprite_obj_w)
+                elif col == map_gen.CAVE_TILE:
+                    sprite_obj_w.cshape = cm.AARectShape(
+                        sprite_obj_w.position,
+                        8 * self._scale_me,
+                        8 * self._scale_me
+                    )
+                    self.PLAYER_CAVE_COLLISION_MANAGER.add(sprite_obj_w)
 
         properties = {
             'width': dungeon_map.width,

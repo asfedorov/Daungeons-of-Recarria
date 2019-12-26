@@ -582,6 +582,7 @@ if __name__ == '__main__':
     def generate_map(width, height, rooms=5, excluded_rooms=0):
         """Summary
 
+<<<<<<< Updated upstream
         Args:
             width (TYPE): Description
             height (TYPE): Description

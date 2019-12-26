@@ -6,8 +6,8 @@ from scenes import menus
 
 if __name__ == "__main__":
     # director init takes the same arguments as pyglet.window
-    width = 400
-    height = 300
+    width = 1240
+    height = 720
     cocos.director.director.init(
         width=width,
         height=height,
@@ -16,7 +16,7 @@ if __name__ == "__main__":
         # fullscreen=True,
         # resizable=True
     )
-    # cocos.director.director.show_FPS = True
+    cocos.director.director.show_FPS = True
 
     # main_scene = game.GameScene()
     main_scene = menus.MainMenuScene()

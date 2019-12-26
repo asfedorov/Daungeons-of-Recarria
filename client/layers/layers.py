@@ -21,7 +21,8 @@ class MyRectMapLayer(cocos.tiles.RectMapLayer):
                 self.get_cell(*x)
                 for x in self.parent.get_watching_tiles(
                     self.parent.player.position[0],
-                    self.parent.player.position[1]
+                    self.parent.player.position[1],
+                    watch_range=self.parent.player.watch_range
                 )
             }
         x, y = self.view_x / self._scale_me, self.view_y / self._scale_me
