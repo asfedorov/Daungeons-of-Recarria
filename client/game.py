@@ -16,7 +16,7 @@ if __name__ == "__main__":
         # fullscreen=True,
         # resizable=True
     )
-    cocos.director.director.show_FPS = True
+    # cocos.director.director.show_FPS = True
 
     # main_scene = game.GameScene()
     main_scene = menus.MainMenuScene()
