@@ -1,43 +1,16 @@
 import copy
 import random
 
-# Список символов единой ширины для удобства и красоты
-"""
- 
-■
-○
-●
-▲
-▼
-◘
-~
-□
-
-⬚
-▣
-▩
-▨
-"""
-
-UNDEFINED_TILE = '.'
-WALL_TILE = '■'
-OPEN_TILE = ' '
-WATER_TILE = '○'
-DEEP_WATER_TILE = '●'
-WALL_ERODE_TILE = '◘'
-CRACK_TILE = '~'
-CAVE_TILE = '□'
-
-UP_TILE = '▲'
-DOWN_TILE = '▼'
+from .constants import *
 
 MAP_TILES = ''.join([
     WALL_TILE,
     OPEN_TILE,
     WATER_TILE,
-    # CAVE_TILE,
 ])
 TILES_WEIGHT = [30, 50, 10]
+
+NOT_PASSABLE = (WALL_TILE, CAVE_TILE, WALL_ERODE_TILE)
 
 
 class NotEnoughMapSize(Exception):
@@ -46,7 +19,7 @@ class NotEnoughMapSize(Exception):
     pass
 
 
-def _generate_choice(tiles, weights=None):
+def _generate_choice(tiles, weights=None, length=1):
     """
     Генератор псеводслучайного выбора из списка.
 
@@ -55,11 +28,11 @@ def _generate_choice(tiles, weights=None):
         weights (iterable|None): список в весами  вероятности выбора. Должен быть той же длины, что и список тайлов
 
     Returns:
-        элемент списка
+        список
     """
     if not weights:
-        return random.choice(tiles)
-    return random.choices(tiles, weights)
+        return [random.choice(tiles)]
+    return random.choices(tiles, weights, k=length)
 
 
 class Map:
@@ -68,7 +41,7 @@ class Map:
     """
     _min_room_size = (5, 5)
     _max_attemps = 5
-    _wall_additional_size = 2
+    _wall_additional_size = 4
     _max_evolve = 1
     _max_erode = 3
     _live_limit = 6
@@ -82,7 +55,7 @@ class Map:
     _erode_water_limit = 3
     _erode_water_chance = 3
 
-    def __init__(self, width, height, rooms=1):
+    def __init__(self, width, height, rooms=1, excluded_rooms=0):
         """
         Инициализация карты
 
@@ -97,19 +70,36 @@ class Map:
         self._open_tiles = []
         self._rooms_count = rooms
         self._rooms = []
+        self._excluded_rooms = excluded_rooms
 
         # делим карту на комнаты, потом генерируем эти комнаты
         self.shrink_rooms()
+
+        self.exclude_rooms()
+
         self.generate_rooms()
+
         # делаем комнаты чуть крсивее, сглаживаем углы
         self.evolve()
         # соединяем комнаты, чтобы карты была полностью проходима
         self.connect_rooms()
         # доп красивости
         self.erode()
+        # карта могла стать непроходимой, перепроверим
+        self.connect_rooms()
 
         # расставляем вход и выход с карты
         self.set_entrances()
+
+        self._cleanup_walls()
+
+    @property
+    def width(self):
+        return self._width
+
+    @property
+    def height(self):
+        return self._height
 
     def erode(self):
         """Summary
@@ -173,7 +163,7 @@ class Map:
         up_room = random.choice(self._rooms)
         down_room = random.choice(self._rooms)
 
-        up_coord = self._get_random_open_tile_from_room(up_room, is_near_wall=False)
+        up_coord = self._get_random_open_tile_from_room(up_room, is_near_wall=True)
         self._field[up_coord[0]][up_coord[1]] = UP_TILE
 
         down_coord = self._get_random_open_tile_from_room(down_room, is_near_wall=False)
@@ -194,6 +184,24 @@ class Map:
             my_room = self._gen_room(room)
             for i, j, col in self._iter_tiles_from_field(field=my_room):
                 self._field[room[1][0]+i][room[0][0]+j] = col
+
+    def exclude_rooms(self):
+        rooms_to_exclude = []
+        while len(rooms_to_exclude) != self._excluded_rooms:
+            room = random.choice(self._rooms[1:])
+            if room not in rooms_to_exclude:
+                rooms_to_exclude.append(room)
+
+        tiles = _generate_choice(
+            [WALL_TILE, CAVE_TILE],
+            weights=[10, 7],
+            length=self._excluded_rooms
+        )
+        for i, room in enumerate(rooms_to_exclude):
+            my_room = self._gen_with_tile(room, tiles[i])
+            for i, j, col in self._iter_tiles_from_field(field=my_room):
+                self._field[room[1][0]+i][room[0][0]+j] = col
+            self._rooms.remove(room)
 
     def shrink_rooms(self, shrink_random_side=False):
         """Summary
@@ -262,14 +270,17 @@ class Map:
 
             self._connect_rooms(self._rooms[i], self._rooms[i + 1])
 
+    def tiles(self):
+        return self._iter_tiles_from_field()
+
     def _iter_tiles_from_field(self, tiles_range=None, field=None, exclude_borders=False):
         """Summary
-        
+
         Args:
             tiles_range (None, optional): Description
             field (None, optional): Description
             exclude_borders (bool, optional): Description
-        
+
         Yields:
             TYPE: Description
         """
@@ -320,9 +331,9 @@ class Map:
                 break
             appended_new = False
             for connected in temp_connected:
-                neighbours = self._get_neighbours_coord(*connected)
+                neighbours = self._get_neighbours_coord(*connected, diag=False)
                 for n in neighbours:
-                    if self._field[n[0]][n[1]] != WALL_TILE and n not in temp_connected:
+                    if self._field[n[0]][n[1]] not in NOT_PASSABLE and n not in temp_connected:
                         temp_connected.append(n)
                         appended_new = True
 
@@ -376,6 +387,15 @@ class Map:
                     start = (start[0], start[1] - 1)
 
                 if self._field[start[0]][start[1]] == WALL_TILE:
+                    self._field[start[0]][start[1]] = OPEN_TILE
+
+                elif self._field[start[0]][start[1]] == UNDEFINED_TILE:
+                    for n in self._get_neighbours_coord(start[0], start[1]):
+                        if self._field[n[0]][n[1]] == UNDEFINED_TILE:
+                            self._field[n[0]][n[1]] = WALL_TILE
+                    self._field[start[0]][start[1]] = OPEN_TILE
+
+                elif self._field[start[0]][start[1]] == CAVE_TILE:
                     self._field[start[0]][start[1]] = OPEN_TILE
 
     def _gen_room(self, room):
@@ -433,7 +453,15 @@ class Map:
                     room[i][j] = _generate_choice(MAP_TILES, _weights)[0]
         return room
 
-    def _get_neighbours_coord(self, i_row, j_col):
+    def _gen_with_tile(self, room, tile):
+        result = []
+        w = room[0][1] - room[0][0]
+        h = room[1][1] - room[1][0]
+        for i in range(h):
+            result.append(w * [tile])
+        return result
+
+    def _get_neighbours_coord(self, i_row, j_col, diag=True):
         """Summary
         
         Args:
@@ -443,15 +471,23 @@ class Map:
         Returns:
             TYPE: Description
         """
+        if diag:
+            return [
+                (i_row, j_col-1),
+                (i_row-1, j_col-1),
+                (i_row-1, j_col),
+                (i_row-1, j_col+1),
+                (i_row, j_col+1),
+                (i_row+1, j_col+1),
+                (i_row+1, j_col),
+                (i_row+1, j_col-1),
+            ]
+
         return [
             (i_row, j_col-1),
-            (i_row-1, j_col-1),
             (i_row-1, j_col),
-            (i_row-1, j_col+1),
             (i_row, j_col+1),
-            (i_row+1, j_col+1),
             (i_row+1, j_col),
-            (i_row+1, j_col-1),
         ]
 
     def _evolve(self, live_tile, dead_tile):
@@ -483,7 +519,7 @@ class Map:
 
     def __repr__(self):
         """Summary
-        
+
         Returns:
             TYPE: Description
         """
@@ -492,16 +528,67 @@ class Map:
             for x in self._field
         ])
 
+    def dump_to_string(self, delimeter=';'):
+        """Summary
 
-def generate_map(width, height, rooms=5):
-    """Summary
-    
-    Args:
-        width (TYPE): Description
-        height (TYPE): Description
-        rooms (int, optional): Description
-    """
-    my_map = Map(width, height, rooms)
-    print(my_map)
+        Returns:
+            TYPE: Description
+        """
+        return delimeter.join([
+            "".join(x)
+            for x in self._field
+        ])
 
-generate_map(32, 24)
+    def return_inverse(self):
+        return self._field
+
+    def _cleanup_walls(self):
+        field = copy.deepcopy(self._field)
+        for i, j, col in self._iter_tiles_from_field():
+            unreachable = True
+            for n_coord in self._get_neighbours_coord(i, j):
+                try:
+                    if self._field[n_coord[0]][n_coord[1]] != WALL_TILE:
+                        unreachable = False
+                except:
+                    pass
+
+            if unreachable:
+                field[i][j] = UNDEFINED_TILE
+
+        self._field = field
+
+
+if __name__ == '__main__':
+
+    def generate_map(width, height, rooms=5, excluded_rooms=0):
+        """Summary
+
+<<<<<<< Updated upstream
+        Args:
+            width (TYPE): Description
+            height (TYPE): Description
+            rooms (int, optional): Description
+        """
+        my_map = Map(width, height, rooms, excluded_rooms)
+        # return my_map.return_inverse()
+        print(my_map)
+
+    generate_map(48, 32, rooms=7, excluded_rooms=3)
+
+    # i = 0
+    # while True:
+    #     if i > 10:
+    #         break
+    #     map_width = random.randint(12, 72)
+    #     map_height = random.randint(12, 72)
+    #     map_rooms = random.randint(1, (map_width * map_height)//100)
+    #     map_excluded_rooms = 0
+    #     if map_rooms > 3:
+    #         map_excluded_rooms = random.randint(0, map_rooms - 2)
+    #     try:
+    #         generate_map(map_width, map_height, rooms=map_rooms, excluded_rooms=map_excluded_rooms)
+    #         break
+    #     except:
+    #         i += 1
+    #         continue

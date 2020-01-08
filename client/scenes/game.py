@@ -1,10 +1,9 @@
-import random
-
 import cocos
 
-from utils import map_gen
-from layers.map_layers import DungeonLayer
+from utils.map_gen import Map
+from api.client import BaseAPIClient
 from layers.player import PlayerLayer
+from layers.map_layers import DungeonLayer
 
 
 class GameScene(cocos.scene.Scene):
@@ -13,22 +12,8 @@ class GameScene(cocos.scene.Scene):
 
         screen_width, screen_height = cocos.director.director.get_window_size()
 
-        i = 0
-        while True:
-            if i > 10:
-                break
-            map_width = random.randint(12, 72)
-            map_height = random.randint(12, 72)
-            map_rooms = random.randint(1, (map_width * map_height)//100)
-            map_excluded_rooms = 0
-            if map_rooms > 3:
-                map_excluded_rooms = random.randint(0, map_rooms - 2)
-            try:
-                dungeon_map = map_gen.Map(map_width, map_height, map_rooms, map_excluded_rooms)
-                break
-            except:
-                i += 1
-                continue
+        dungeon_map_dumped = BaseAPIClient.get_new_map()
+        dungeon_map = Map(dungeon_map_dumped['map'])
 
         dungeon_layer = DungeonLayer(
             dungeon_map,
